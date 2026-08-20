@@ -48,7 +48,7 @@ Or use **VS Code Live Server** for a better development experience.
 
 ## 📸 Screenshots
 
-![RecyConnect Dashboard](screenshots/dashboard.png)
+![RecyConnect Dashboard](dashboard.png)
 
 ## 🎯 Future Improvements
 
