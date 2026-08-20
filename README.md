@@ -44,7 +44,7 @@ Or use **VS Code Live Server** for a better development experience.
 
 ## 🌐 Live Demo
 
-**Live Demo:** Add your GitHub Pages link here.
+**Live Demo:** https://shashi-code07.github.io/RecyConnect/
 
 ## 📸 Screenshots
 
