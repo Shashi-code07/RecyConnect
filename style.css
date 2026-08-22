@@ -786,3 +786,780 @@ footer p {
         width: 100%;
     }
 }
+/* =========================
+   SMART MATCH DETAILS
+========================= */
+
+.match-score {
+    margin: 15px 0;
+}
+
+.match-score strong {
+    display: inline-block;
+    background: #e4f7eb;
+    color: #168653;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.match-reasons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.match-reasons span {
+    background: #f5faf7;
+    border: 1px solid #dceae2;
+    color: #557067;
+    padding: 6px 9px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+/* =================================
+   MY LISTINGS / HISTORY
+================================= */
+
+.history-box {
+    margin-top: 30px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.history-box .section-heading {
+    margin-bottom: 24px;
+}
+
+.history-box h3 {
+    margin: 6px 0;
+    font-size: 24px;
+    color: #0f172a;
+}
+
+.listing-history {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* History Card */
+
+.history-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    transition: 0.25s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+/* Left Side */
+
+.history-main {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+}
+
+.history-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dcfce7;
+    border-radius: 14px;
+    font-size: 23px;
+}
+
+.history-main h4 {
+    margin: 0 0 5px;
+    font-size: 17px;
+    color: #0f172a;
+}
+
+.history-main p {
+    margin: 0 0 4px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.history-main small {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* Right Side */
+
+.history-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+    text-align: right;
+}
+
+.history-value {
+    font-weight: 700;
+    color: #0f766e;
+    font-size: 15px;
+}
+
+.history-status {
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.history-details small {
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Empty State */
+
+.empty-history {
+    text-align: center;
+    padding: 35px 20px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 16px;
+    background: #f8fafc;
+}
+
+.empty-history span {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.empty-history p {
+    margin: 0 0 5px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.empty-history small {
+    color: #94a3b8;
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 700px) {
+
+    .history-box {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .history-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .history-details {
+        width: 100%;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .history-main {
+        width: 100%;
+    }
+}
+/* =================================
+   PICKUP SCHEDULER
+================================= */
+
+.pickup-scheduler {
+    margin-top: 25px;
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+}
+
+.pickup-scheduler-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.pickup-scheduler-header h4 {
+    margin: 4px 0 0;
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.pickup-scheduler-header > span {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dcfce7;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
+.pickup-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 15px;
+}
+
+.pickup-form-grid .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.pickup-form-grid label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.pickup-form-grid input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #0f172a;
+    font-family: inherit;
+    outline: none;
+}
+
+.pickup-form-grid input:focus {
+    border-color: #0f766e;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.08);
+}
+
+@media (max-width: 700px) {
+
+    .pickup-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =================================
+   IMPACT DASHBOARD
+================================= */
+
+.impact-box {
+    margin-top: 30px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.impact-box .section-heading {
+    margin-bottom: 24px;
+}
+
+.impact-box h3 {
+    margin: 6px 0;
+    font-size: 24px;
+    color: #0f172a;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.impact-card {
+    padding: 22px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    transition: 0.25s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.impact-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    background: #dcfce7;
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.impact-card span {
+    display: block;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.impact-card h4 {
+    margin: 7px 0;
+    font-size: 24px;
+    color: #0f172a;
+}
+
+.impact-card small {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+.impact-message {
+    margin-top: 20px;
+    padding: 16px 18px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    color: #166534;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .impact-box {
+        padding: 20px;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =================================
+   RECYCLER DETAILS
+================================= */
+
+.match-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 15px;
+}
+
+.match-actions button {
+    width: 100%;
+}
+
+.details-btn {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #334155;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.details-btn:hover {
+    background: #f1f5f9;
+}
+
+/* Modal */
+
+.recycler-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(5px);
+}
+
+.recycler-modal.show {
+    display: flex;
+}
+
+.recycler-modal-content {
+    position: relative;
+    width: min(500px, 100%);
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.recycler-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 35px;
+}
+
+.recycler-avatar {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.recycler-profile h3 {
+    margin: 5px 0 0;
+    color: #0f172a;
+}
+
+.verified-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #166534;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.recycler-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.recycler-detail-grid > div {
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.recycler-detail-grid span {
+    display: block;
+    margin-bottom: 6px;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.recycler-detail-grid strong {
+    color: #0f172a;
+    font-size: 14px;
+}
+
+.recycler-match-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+.recycler-match-result span {
+    color: #166534;
+    font-size: 13px;
+}
+
+.recycler-match-result strong {
+    color: #15803d;
+    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+
+    .recycler-modal-content {
+        padding: 22px;
+    }
+
+    .recycler-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =================================
+   RECYCONNECT — FINAL ANIMATIONS
+================================= */
+
+/* Smooth page sections */
+.section {
+    animation: fadeUp 0.7s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Dashboard cards */
+
+.dashboard-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+
+
+/* Recycler cards */
+
+.match-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.10);
+}
+
+
+/* Buttons */
+
+.btn,
+.accept-btn,
+.details-btn {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn:hover,
+.accept-btn:hover,
+.details-btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active,
+.accept-btn:active,
+.details-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* Match score */
+
+.match-score {
+    animation: scoreReveal 0.6s ease both;
+}
+
+@keyframes scoreReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Journey steps */
+
+.journey-step {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.journey-step.completed {
+    animation: stepComplete 0.5s ease both;
+}
+
+@keyframes stepComplete {
+    0% {
+        transform: scale(0.92);
+    }
+
+    60% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* History cards */
+
+.history-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Impact cards */
+
+.impact-card {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* Impact message */
+
+.impact-message {
+    animation: softAppear 0.6s ease both;
+}
+
+@keyframes softAppear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Recycler modal */
+
+.recycler-modal.show .recycler-modal-content {
+    animation: modalIn 0.3s ease both;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* Pickup scheduler */
+
+.pickup-scheduler {
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.pickup-scheduler:hover {
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+
+/* Respect reduced-motion preference */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+/* =================================
+   RECYCONNECT LOGO ANIMATION
+================================= */
+
+.logo {
+    animation: logoFloat 3s ease-in-out infinite;
+    transition: transform 0.25s ease;
+}
+
+.logo:hover {
+    transform: scale(1.04);
+}
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}

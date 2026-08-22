@@ -198,7 +198,43 @@
 
         </div>
 
+        <!-- PICKUP SCHEDULING -->
 
+<div class="pickup-scheduler">
+
+    <div class="pickup-scheduler-header">
+        <div>
+            <p class="tag">PICKUP DETAILS</p>
+            <h4>Schedule Your Pickup</h4>
+        </div>
+
+        <span>🚚</span>
+    </div>
+
+    <div class="pickup-form-grid">
+
+        <div class="input-box">
+            <label for="pickupDate">Pickup Date</label>
+            <input type="date" id="pickupDate">
+        </div>
+
+        <div class="input-box">
+            <label for="pickupTime">Pickup Time</label>
+            <input type="time" id="pickupTime">
+        </div>
+
+        <div class="input-box pickup-location-box">
+            <label for="pickupLocation">Pickup Location</label>
+            <input
+                type="text"
+                id="pickupLocation"
+                placeholder="Enter pickup location"
+            >
+        </div>
+
+    </div>
+
+</div>
         <div class="tracking-buttons">
 
             <button
@@ -216,9 +252,75 @@
         </div>
 
     </div>
+<!-- MY LISTINGS / HISTORY -->
 
+<div class="history-box">
+
+    <div class="section-heading">
+        <p class="tag">MY ACTIVITY</p>
+        <h3>My Listings & History</h3>
+        <p>View your previous recycling requests and their current status.</p>
+    </div>
+
+    <div id="listingHistory" class="listing-history">
+
+        <div class="empty-history">
+            <span>♻️</span>
+            <p>No recycling listings yet.</p>
+            <small>Create your first waste listing to see it here.</small>
+        </div>
+
+    </div>
+
+</div>
 </section>
+<!-- IMPACT DASHBOARD -->
 
+<div class="impact-box">
+
+    <div class="section-heading">
+        <p class="tag">YOUR ENVIRONMENTAL IMPACT</p>
+        <h3>Impact Dashboard</h3>
+        <p>See how your recycling activity contributes to a cleaner future.</p>
+    </div>
+
+    <div class="impact-grid">
+
+        <div class="impact-card">
+            <div class="impact-icon">♻️</div>
+            <span>Total Recycled</span>
+            <h4 id="impactRecycled">0 kg</h4>
+            <small>Waste successfully recycled</small>
+        </div>
+
+        <div class="impact-card">
+            <div class="impact-icon">🚚</div>
+            <span>Successful Pickups</span>
+            <h4 id="impactPickups">0</h4>
+            <small>Completed recycling pickups</small>
+        </div>
+
+        <div class="impact-card">
+            <div class="impact-icon">🌱</div>
+            <span>Waste Diverted</span>
+            <h4 id="impactDiverted">0 kg</h4>
+            <small>Kept away from disposal</small>
+        </div>
+
+        <div class="impact-card">
+            <div class="impact-icon">💚</div>
+            <span>Impact Score</span>
+            <h4 id="impactScore">0</h4>
+            <small>Based on recycling activity</small>
+        </div>
+
+    </div>
+
+    <div class="impact-message" id="impactMessage">
+        Start recycling to create your environmental impact.
+    </div>
+
+</div>
 <section class="section" id="list">
 
     <div class="section-heading">
@@ -295,68 +397,7 @@
         <p>Potential recycling partners for your waste.</p>
     </div>
 
-    <div class="match-grid">
-
-        <div class="match-card">
-            <div class="match-top">
-                <span class="material">♻️</span>
-                <span class="verified">✓ Verified</span>
-            </div>
-
-            <h3>GreenCycle Recycler</h3>
-            <p>Plastic & Cardboard</p>
-
-            <div class="match-info">
-                <span>📍 Nearby</span>
-                <span>💰 Fair Price</span>
-            </div>
-
-            <button onclick="acceptMatch('GreenCycle Recycler')">
-                Accept Match
-            </button>
-        </div>
-
-
-        <div class="match-card">
-            <div class="match-top">
-                <span class="material">🔩</span>
-                <span class="verified">✓ Verified</span>
-            </div>
-
-            <h3>EcoMetal Hub</h3>
-            <p>Metal & E-Waste</p>
-
-            <div class="match-info">
-                <span>📍 4.2 km</span>
-                <span>💰 Fair Price</span>
-            </div>
-
-            <button onclick="acceptMatch('EcoMetal Hub')">
-                Accept Match
-            </button>
-        </div>
-
-
-        <div class="match-card">
-            <div class="match-top">
-                <span class="material">📦</span>
-                <span class="verified">✓ Verified</span>
-            </div>
-
-            <h3>PaperGreen Center</h3>
-            <p>Paper & Cardboard</p>
-
-            <div class="match-info">
-                <span>📍 2.8 km</span>
-                <span>💰 Fair Price</span>
-            </div>
-
-            <button onclick="acceptMatch('PaperGreen Center')">
-                Accept Match
-            </button>
-        </div>
-
-    </div>
+    <div class="match-grid"></div>
 
 </section>
 
@@ -409,6 +450,88 @@
 
 
 <script src="script.js"></script>
+<!-- RECYCLER DETAILS MODAL -->
 
+<div class="recycler-modal" id="recyclerModal">
+
+    <div class="recycler-modal-content">
+
+        <button
+            class="modal-close"
+            onclick="closeRecyclerModal()">
+            ×
+        </button>
+
+        <div class="recycler-profile">
+
+            <div
+                class="recycler-avatar"
+                id="recyclerInitials">
+                GC
+            </div>
+
+            <div>
+                <div class="verified-badge">
+                    ✓ Verified Recycler
+                </div>
+
+                <h3 id="recyclerName">
+                    Recycler Name
+                </h3>
+            </div>
+
+        </div>
+
+        <div class="recycler-detail-grid">
+
+            <div>
+                <span>♻️ Materials</span>
+                <strong id="recyclerMaterials">
+                    Plastic • Cardboard
+                </strong>
+            </div>
+
+            <div>
+                <span>📍 Distance</span>
+                <strong id="recyclerDistance">
+                    2.4 km
+                </strong>
+            </div>
+
+            <div>
+                <span>⭐ Rating</span>
+                <strong id="recyclerRating">
+                    ⭐ 4.8
+                </strong>
+            </div>
+
+            <div>
+                <span>🚚 Completed Pickups</span>
+                <strong id="recyclerPickups">
+                    127+
+                </strong>
+            </div>
+
+        </div>
+
+        <div class="recycler-match-result">
+
+            <span>Your FairMatch Score</span>
+
+            <strong id="recyclerScore">
+                94% Match
+            </strong>
+
+        </div>
+
+        <button
+            class="btn primary"
+            onclick="closeRecyclerModal()">
+            Close Details
+        </button>
+
+    </div>
+
+</div>
 </body>
 </html>
