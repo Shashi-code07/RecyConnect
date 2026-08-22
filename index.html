@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecyConnect | Smart Recycling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">♻️ RecyConnect</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#list">List Waste</a>
+        <a href="#matches">Matches</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+        <p class="tag">SMART • FAIR • SUSTAINABLE</p>
+
+        <h1>Turn Waste Into<br><span>Worth.</span></h1>
+
+        <p>
+            RecyConnect connects recyclable waste generators
+            with verified recyclers for fair-value recycling
+            and responsible waste management.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#list" class="btn primary">List Your Waste</a>
+            <a href="#matches" class="btn secondary">Find Recycler</a>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <div class="recycle-icon">♻</div>
+        <h2>Waste → Match → Recycle</h2>
+        <p>Connecting people with the right recycling partners.</p>
+    </div>
+
+</section>
+
+
+<section class="stats">
+
+    <div>
+        <h2>120+</h2>
+        <p>Waste Listings</p>
+    </div>
+
+    <div>
+        <h2>45+</h2>
+        <p>Recyclers</p>
+    </div>
+
+    <div>
+        <h2>85%</h2>
+        <p>Successful Matches</p>
+    </div>
+
+    <div>
+        <h2>250kg+</h2>
+        <p>Waste Recycled</p>
+    </div>
+
+</section>
+
+<!-- DASHBOARD -->
+<section class="section" id="dashboard">
+
+    <div class="section-heading">
+        <p class="tag">YOUR RECYCLING CONTROL CENTER</p>
+
+        <h2>Recycling Dashboard</h2>
+
+        <p>
+            Track your waste, matches, estimated value and recycling impact.
+        </p>
+    </div>
+
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+            <div class="dashboard-icon">♻️</div>
+
+            <span>Total Waste Listed</span>
+
+            <h3 id="totalWaste">0 kg</h3>
+
+            <p>Recyclable material</p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <div class="dashboard-icon">🤝</div>
+
+            <span>Active Match</span>
+
+            <h3 id="activeMatch">—</h3>
+
+            <p id="matchStatus">
+                Create a listing first
+            </p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <div class="dashboard-icon">₹</div>
+
+            <span>Estimated Value</span>
+
+            <h3 id="estimatedValue">₹0</h3>
+
+            <p>Expected recycling value</p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <div class="dashboard-icon">🌱</div>
+
+            <span>Waste Diverted</span>
+
+            <h3 id="wasteDiverted">0 kg</h3>
+
+            <p>Environmental impact</p>
+        </div>
+
+    </div>
+
+
+    <!-- RECYCLING JOURNEY -->
+
+    <div class="tracking-box">
+
+        <div class="tracking-header">
+
+            <div>
+                <p class="tag">RECYCLING JOURNEY</p>
+
+                <h3 id="trackingTitle">
+                    Your recycling journey starts here
+                </h3>
+            </div>
+
+            <span id="trackingStatus">
+                WAITING
+            </span>
+
+        </div>
+
+
+        <div class="journey">
+
+            <div class="journey-step active" id="listedStep">
+                <div>1</div>
+                <b>Listed</b>
+                <small>Waste added</small>
+            </div>
+
+
+            <div class="journey-line"></div>
+
+
+            <div class="journey-step" id="matchedStep">
+                <div>2</div>
+                <b>Matched</b>
+                <small>Recycler found</small>
+            </div>
+
+
+            <div class="journey-line"></div>
+
+
+            <div class="journey-step" id="pickupStep">
+                <div>3</div>
+                <b>Pickup</b>
+                <small>Collection</small>
+            </div>
+
+
+            <div class="journey-line"></div>
+
+
+            <div class="journey-step" id="recycledStep">
+                <div>4</div>
+                <b>Recycled</b>
+                <small>Impact created</small>
+            </div>
+
+        </div>
+
+        <!-- PICKUP SCHEDULING -->
+
+<div class="pickup-scheduler">
+
+    <div class="pickup-scheduler-header">
+        <div>
+            <p class="tag">PICKUP DETAILS</p>
+            <h4>Schedule Your Pickup</h4>
+        </div>
+
+        <span>🚚</span>
+    </div>
+
+    <div class="pickup-form-grid">
+
+        <div class="input-box">
+            <label for="pickupDate">Pickup Date</label>
+            <input type="date" id="pickupDate">
+        </div>
+
+        <div class="input-box">
+            <label for="pickupTime">Pickup Time</label>
+            <input type="time" id="pickupTime">
+        </div>
+
+        <div class="input-box pickup-location-box">
+            <label for="pickupLocation">Pickup Location</label>
+            <input
+                type="text"
+                id="pickupLocation"
+                placeholder="Enter pickup location"
+            >
+        </div>
+
+    </div>
+
+</div>
+        <div class="tracking-buttons">
+
+            <button
+                class="btn secondary"
+                onclick="schedulePickup()">
+                Schedule Pickup →
+            </button>
+
+            <button
+                class="btn primary"
+                onclick="completeRecycling()">
+                Mark as Recycled ✓
+            </button>
+
+        </div>
+
+    </div>
+<!-- MY LISTINGS / HISTORY -->
+
+<div class="history-box">
+
+    <div class="section-heading">
+        <p class="tag">MY ACTIVITY</p>
+        <h3>My Listings & History</h3>
+        <p>View your previous recycling requests and their current status.</p>
+    </div>
+
+    <div id="listingHistory" class="listing-history">
+
+        <div class="empty-history">
+            <span>♻️</span>
+            <p>No recycling listings yet.</p>
+            <small>Create your first waste listing to see it here.</small>
+        </div>
+
+    </div>
+
+</div>
+</section>
+<!-- IMPACT DASHBOARD -->
+
+<div class="impact-box">
+
+    <div class="section-heading">
+        <p class="tag">YOUR ENVIRONMENTAL IMPACT</p>
+        <h3>Impact Dashboard</h3>
+        <p>See how your recycling activity contributes to a cleaner future.</p>
+    </div>
+
+    <div class="impact-grid">
+
+        <div class="impact-card">
+            <div class="impact-icon">♻️</div>
+            <span>Total Recycled</span>
+            <h4 id="impactRecycled">0 kg</h4>
+            <small>Waste successfully recycled</small>
+        </div>
+
+        <div class="impact-card">
+            <div class="impact-icon">🚚</div>
+            <span>Successful Pickups</span>
+            <h4 id="impactPickups">0</h4>
+            <small>Completed recycling pickups</small>
+        </div>
+
+        <div class="impact-card">
+            <div class="impact-icon">🌱</div>
+            <span>Waste Diverted</span>
+            <h4 id="impactDiverted">0 kg</h4>
+            <small>Kept away from disposal</small>
+        </div>
+
+        <div class="impact-card">
+            <div class="impact-icon">💚</div>
+            <span>Impact Score</span>
+            <h4 id="impactScore">0</h4>
+            <small>Based on recycling activity</small>
+        </div>
+
+    </div>
+
+    <div class="impact-message" id="impactMessage">
+        Start recycling to create your environmental impact.
+    </div>
+
+</div>
+<section class="section" id="list">
+
+    <div class="section-heading">
+        <p class="tag">CREATE LISTING</p>
+        <h2>List Your Recyclable Waste</h2>
+        <p>Enter your waste details and find suitable recycling partners.</p>
+    </div>
+
+    <form id="wasteForm">
+
+        <div class="form-grid">
+
+            <div class="input-box">
+                <label>Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-box">
+                <label>Waste Type</label>
+
+                <select id="wasteType" required>
+                    <option value="">Select waste type</option>
+                    <option>Plastic</option>
+                    <option>Paper</option>
+                    <option>Metal</option>
+                    <option>E-Waste</option>
+                    <option>Glass</option>
+                    <option>Cardboard</option>
+                </select>
+
+            </div>
+
+            <div class="input-box">
+                <label>Quantity (kg)</label>
+                <input type="number" id="quantity" placeholder="e.g. 10" required>
+            </div>
+
+            <div class="input-box">
+                <label>Location</label>
+                <input type="text" id="location" placeholder="Enter location" required>
+            </div>
+
+            <div class="input-box">
+                <label>Expected Value (₹)</label>
+                <input type="number" id="value" placeholder="Expected amount" required>
+            </div>
+
+            <div class="input-box">
+                <label>Pickup Preference</label>
+
+                <select id="pickup">
+                    <option>Recycler Pickup</option>
+                    <option>Self Delivery</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn primary submit-btn">
+            Create Waste Listing
+        </button>
+
+    </form>
+
+</section>
+
+
+<section class="section matches" id="matches">
+
+    <div class="section-heading">
+        <p class="tag">SMART MATCHING</p>
+        <h2>Available Recycler Matches</h2>
+        <p>Potential recycling partners for your waste.</p>
+    </div>
+
+    <div class="match-grid"></div>
+
+</section>
+
+
+<section class="section about" id="about">
+
+    <div>
+        <p class="tag">ABOUT RECYCONNECT</p>
+
+        <h2>Making Recycling<br>Simple & Fair.</h2>
+
+        <p>
+            RecyConnect creates a bridge between waste generators
+            and recyclers. Our smart matching approach helps users
+            discover suitable recycling partners based on waste
+            type, quantity, location and fair value.
+        </p>
+    </div>
+
+    <div class="process">
+
+        <div>
+            <span>01</span>
+            <h3>List Waste</h3>
+            <p>Add your recyclable waste details.</p>
+        </div>
+
+        <div>
+            <span>02</span>
+            <h3>Get Matched</h3>
+            <p>Find suitable verified recyclers.</p>
+        </div>
+
+        <div>
+            <span>03</span>
+            <h3>Recycle</h3>
+            <p>Complete the pickup and recycling.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <h2>♻️ RecyConnect</h2>
+    <p>Connecting Waste With Its Right Destination.</p>
+    <p>© 2026 RecyConnect</p>
+</footer>
+
+
+<script src="script.js"></script>
+<!-- RECYCLER DETAILS MODAL -->
+
+<div class="recycler-modal" id="recyclerModal">
+
+    <div class="recycler-modal-content">
+
+        <button
+            class="modal-close"
+            onclick="closeRecyclerModal()">
+            ×
+        </button>
+
+        <div class="recycler-profile">
+
+            <div
+                class="recycler-avatar"
+                id="recyclerInitials">
+                GC
+            </div>
+
+            <div>
+                <div class="verified-badge">
+                    ✓ Verified Recycler
+                </div>
+
+                <h3 id="recyclerName">
+                    Recycler Name
+                </h3>
+            </div>
+
+        </div>
+
+        <div class="recycler-detail-grid">
+
+            <div>
+                <span>♻️ Materials</span>
+                <strong id="recyclerMaterials">
+                    Plastic • Cardboard
+                </strong>
+            </div>
+
+            <div>
+                <span>📍 Distance</span>
+                <strong id="recyclerDistance">
+                    2.4 km
+                </strong>
+            </div>
+
+            <div>
+                <span>⭐ Rating</span>
+                <strong id="recyclerRating">
+                    ⭐ 4.8
+                </strong>
+            </div>
+
+            <div>
+                <span>🚚 Completed Pickups</span>
+                <strong id="recyclerPickups">
+                    127+
+                </strong>
+            </div>
+
+        </div>
+
+        <div class="recycler-match-result">
+
+            <span>Your FairMatch Score</span>
+
+            <strong id="recyclerScore">
+                94% Match
+            </strong>
+
+        </div>
+
+        <button
+            class="btn primary"
+            onclick="closeRecyclerModal()">
+            Close Details
+        </button>
+
+    </div>
+
+</div>
+</body>
+</html>
